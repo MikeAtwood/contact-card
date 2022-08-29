@@ -1,0 +1,23 @@
+{
+  "name": "contact-card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeAtwood/contact-card.git"
+  },
+  "keywords": [
+    "express",
+    "server"
+  ],
+  "author": "Mike Atwood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikeAtwood/contact-card/issues"
+  },
+  "homepage": "https://github.com/MikeAtwood/contact-card#readme"
+}
