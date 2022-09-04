@@ -1,17 +1,41 @@
-const webpack = require("webpack")
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  entry: "./assets/js/script.js",
+  mode: 'development',
+  entry: './src/js/index.js',
   output: {
-    path: path.join(__dirname + "/dist"),
-    filename: "main.bundle.js"
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
+
   plugins: [
-  new webpack.ProvidePlugin({
-    $: "jquery",
-    jQuery: "jquery"
-  }),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      title: 'Webpack Plugin',
+    }),
+
   ],
-  mode: "development"
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
+  },
 };
