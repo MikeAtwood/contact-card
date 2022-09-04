@@ -1,5 +1,12 @@
-import { initdb } from "./form";
+// Import functions
+import { initdb } from './database';
+import "./form";
 import "./submit";
+
+// Import CSS files
+import "../css/index.css";
+
+// Import Bootstrap
 import { Tooltip, Toast, Popover } from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,5 +21,3 @@ window.addEventListener('load', function () {
   document.getElementById('dogThumbnail').src = Dog;
 });
 
-// Import CSS files
-import "../css/index.css";
