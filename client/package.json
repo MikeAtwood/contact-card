@@ -8,18 +8,10 @@
     "dev": "webpack-dev-server",
     "start": "webpack --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git"
-  },
-  "keywords": [
-    "express",
-    "server"
-  ],
-  "author": "Mike Atwood",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
@@ -30,6 +22,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.0"
+    "bootstrap": "^5.2.0",
+    "idb": "^7.0.2"
   }
 }
